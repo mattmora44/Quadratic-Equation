@@ -26,19 +26,21 @@ int main(){
 		cout << "x = "<< x1<<endl;
 	}
 	//2 real roots
-	if (b*b-4*a*c > 0){
+	else if (b*b-4*a*c > 0){
 		x1 = findFirstroot(a,b,c);
 		x2 = findSecRoot(a,b,c);
 		cout <<"x1: "<<x1<<endl<<"x2: "<<x2<<endl;S
 	}
 	//idendical roots
-	if (b*b-4*a*c == 0){
-
+	else if (b*b-4*a*c == 0){
+		x1 = findFirstroot(a,b,c);
+		cout <<"x1 = x2 = "<<x1<<endl;
 	}
 	//imaginary roots
-	if (b*b-4*a*c < 0){
-
+	else if (b*b-4*a*c < 0){
+		cout << "x1: "<<-1*b/(2*a)<<"=/- "<<(sqrt(-1*(b*b-4*a*c)))/(2*a)<<"i"<<endl;
 	}
+	else {throw runtime_error("cannot find roots.");}
 
 	catch (runtime_error& e){
 		cout<<endl<<e.what()<<endl;
