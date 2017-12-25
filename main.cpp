@@ -13,9 +13,19 @@ int main(){
 		cin >> b;
 		cout <<"Enter value for c: "
 		cin >> c;
-		if (!cin.isgood() ){
+		if (!cin.isgood() || !){
 			throw runtime_error("Bad value.");
 		}
 	}
-	catch {runtime_error(e.what());}
+	double x1 = 0.0;
+	double x2 = 0.0;
+
+	//linear
+	//2 real roots
+	//idendical roots
+	//imaginary roots
+
+	catch (runtime_error& e){
+		cout<<endl<<e.what()<<endl;
+	}
 }
